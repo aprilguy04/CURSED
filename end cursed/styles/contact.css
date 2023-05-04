@@ -1,0 +1,196 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-attachment: fixed;
+  align-content: space-between;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../images/back.webp");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.header {
+  overflow: hidden;
+  background-color: rgba(224, 180, 41, 0.8);
+  padding: 2px 8px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 3;
+  height: 15%;
+  order: 1;
+  font-size: calc((1vw + 1vh) * 3);
+}
+
+.header div.companyName {
+  float: none;
+  position: static;
+  color: black;
+  text-align: center;
+  padding: calc((1vw + 1vh) * 0.6);
+  text-decoration: none;
+  font-size: calc((1vw + 1vh) * 3);
+  line-height: 25px;
+  border-radius: calc((1vw + 1vh) * 0.3);
+}
+
+.logotype {
+  height: 100%;
+}
+
+.header-right {
+  font-size: calc((1vw + 1vh) * 3);
+}
+
+.overlay1 {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  background-color: rgb(104, 170, 255);
+  background-color: rgb(104, 170, 243);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay1-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay1 a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: calc((1vw + 1vh) * 2);
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay1 a:hover, .overlay1 a:focus {
+  color: #f1f1f1;
+}
+
+.overlay1 .closebtn {
+  position: absolute;
+  top: 20px;
+  right: calc((1vw + 1vh) * 2);
+  font-size: calc((1vw + 1vh) * 3);
+}
+
+@media screen and (max-height: 450px) {
+  .overlay1 a {
+    font-size: 20px;
+  }
+}
+.profiles {
+  margin-top: 20px;
+  order: 2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#profileCard1 {
+  order: 1;
+  float: left;
+}
+
+#profileCard2 {
+  order: 2;
+  float: right;
+}
+
+.profileCard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+  order: 2;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.profileA {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+.contactButton:hover, .profileA:hover {
+  opacity: 0.7;
+}
+
+img.sticky {
+  position: sticky;
+  float: right;
+  top: 0;
+}
+
+h1 {
+  color: #000;
+}
+
+@media screen and (max-width: 600px) {
+  .header div.companyName {
+    font-size: 30px;
+  }
+  body {
+    background-image: url("/images/adaptive.jpg");
+  }
+}
+@media screen and (max-height: 1181px) {
+  .hello {
+    margin-top: 74px;
+  }
+}
+@media screen and (max-height: 896px) {
+  .hello {
+    margin-top: 36px;
+  }
+}
+@media screen and (max-height: 741px) {
+  .hello {
+    margin-top: 26px;
+  }
+}
+@media screen and (max-height: 721px) {
+  .hello {
+    margin-top: 14px;
+  }
+}
+@media screen and (max-height: 668px) {
+  .hello {
+    margin-top: 18px;
+  }
+}
+
+/*# sourceMappingURL=contact.css.map */
