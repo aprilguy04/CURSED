@@ -1,0 +1,504 @@
+$size: calc(1vw + 1vh);
+$grey: #818181;
+$white: #f1f1f1;
+$black: #000;
+@mixin forBody {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("../images/techies.png");
+  background-attachment: fixed;
+  align-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  @include forBody;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.header {
+  overflow: hidden;
+  background-color: rgba(224, 180, 41, 0.8);
+  padding: 2px 8px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 3;
+  height: 15%;
+  order: 1;
+  font-size: calc($size * 3);
+}
+
+.header div.companyName {
+  float: none;
+  position: static;
+  color: black;
+  text-align: center;
+  padding: calc($size * 0.6);
+  text-decoration: none;
+  font-size: calc($size * 2.5);
+  line-height: 25px;
+  border-radius: calc($size * 0.3);
+}
+
+.logotype {
+  height: 100%;
+
+}
+
+.header-right {
+  font-size: calc($size * 3);
+}
+
+.overlay1 {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  background-color: rgb(104, 170, 256);
+  background-color: rgba(104, 170, 243, 10);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay1-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay1 a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: calc($size * 2);;
+  color: $grey;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay1 a:hover, .overlay1 a:focus {
+  color: $white;
+}
+
+.overlay1 .closebtn {
+  position: absolute;
+  top: 20px;
+  right: calc($size * 2);
+  font-size: calc($size * 3);
+}
+
+@media screen and (max-height: 450px) {
+  .overlay1 a {
+    font-size: 20px
+  }
+}
+
+
+.hello {
+  padding-top: 56px;
+  order: 2;
+}
+
+
+/* Create a column layout with Flexbox */
+.row1 {
+  display: flex;
+  order: 5;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: calc($size * 1.2);
+  padding: calc($size * 0.6);
+  border: 1px solid $grey;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: $black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: $white;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  order: 3;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: $white;
+  font-weight: bold;
+  font-size: calc($size);
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(224, 180, 41, 0.8);
+
+}
+
+
+.numbertext {
+  color: $white;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dots {
+  order: 4;
+}
+
+.dot {
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+  margin: 0 2px;
+  background-color: $white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: $grey;
+
+}
+
+.accordion {
+  background-color: $white;
+  color: $grey;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+div.hello h2 {
+  background-color: $white;
+  text-align: center;
+}
+
+.active, .accordion:hover {
+  background-color: #bbbbbb;
+}
+
+.panel {
+  padding: 18px;
+  display: none;
+  background-color: $white;
+  overflow: hidden;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.card a {
+  order: 2;
+}
+
+.price {
+  order: 3;
+}
+
+.typeOfGood {
+  order: 4;
+}
+
+.addToCart {
+  order: 5;
+}
+
+.price {
+  color: $grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: $white;
+  background-color: $black;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  background-color: #cd1ee0
+}
+
+.card button:active {
+  background-color: #ffc303;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+.profileCard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.title {
+  color: $grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: $white;
+  background-color: $black;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.profileA {
+  text-decoration: none;
+  font-size: 22px;
+  color: $black;
+}
+
+.contactButton:hover, .profileA:hover {
+  opacity: 0.7;
+}
+
+img.sticky {
+  position: relative;
+  float: right;
+  top: 0;
+  z-index: 2;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+  margin-top: 10px;
+  order: 6;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .header div.companyName {
+    font-size: calc($size * 1.4);
+  }
+  .hello {
+    padding-top: calc($size * 9);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hello {
+    padding-top: calc($size * 6);
+  }
+}
+
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: rgba(136, 119, 64, 0.8);
+  opacity: 90%;
+}
+
+.container {
+  position: relative;
+  order: 1;
+}
+
+.image {
+
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: $black;
+  order: 5;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text2 {
+  color: $white;
+  font-size: calc($size * 1.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@media screen and (max-width: 950px) {
+  .hello {
+    margin-top: 17px;
+    font-size: calc($size * 1.1);
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .header div.companyName {
+    font-size: calc($size * 2.7);
+  }
+}
+
+@media screen and (max-height: 1181px) {
+  .hello {
+    margin-top: 74px;
+  }
+
+}
+
+@media screen and (max-height: 897px) {
+  .hello {
+    margin-top: 36px;
+  }
+
+}
+
+
+@media screen and (max-height: 741px) {
+  .hello {
+    margin-top: 26px;
+  }
+}
+
+@media screen and (max-height: 721px) {
+  .hello {
+    margin-top: 14px;
+  }
+}
+
+@media screen and (max-height: 668px) {
+  .hello {
+    margin-top: 18px;
+  }
+
+}
+
+/*# sourceMappingURL=slider.css.map */

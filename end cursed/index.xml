@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type='text/xsl' href='./index.xsl'?>
+<goods>
+  <good>
+    <id>1</id>
+    <image>./images/test.webp</image>
+    <name>AT ONCE</name>
+    <price>19.99$</price>
+    <art>FA-0001</art>
+    <charges>30</charges>
+    <cal>4</cal>
+  </good>
+  <good>
+    <id>2</id>
+    <image>./images/korsar.png</image>
+    <name>Корсар</name>
+    <price>1.99$</price>
+    <art>FA-0002</art>
+    <charges>60</charges>
+    <cal>1</cal>
+  </good>
+  <good>
+    <id>3</id>
+    <image>./images/durynda.png</image>
+    <name>Дурында</name>
+    <price>12.99$</price>
+    <art>FA-0003</art>
+    <charges>20</charges>
+    <cal>6</cal>
+  </good>
+  <good>
+    <id>4</id>
+    <image>./images/bengal.png</image>
+    <name>Снеговик</name>
+    <price>1.99$</price>
+    <art>FA-0004</art>
+    <charges>6</charges>
+    <cal>-</cal>
+  </good>
+</goods>

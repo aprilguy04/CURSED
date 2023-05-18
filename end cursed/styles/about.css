@@ -1,0 +1,208 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("/images/back.webp");
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.header {
+    overflow: hidden;
+    background-color: rgba(224, 180, 41, 0.8);
+    padding: 2px 8px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+    height: 15%;
+    font-size: calc(1vw + 1vh * 3);
+}
+
+.header div.companyName {
+    float: none;
+    position: static;
+    color: black;
+    text-align: center;
+    padding: calc(1vw + 1vh*0.6);
+    text-decoration: none;
+    font-size: calc(1vw + 1vh * 2.5);
+    line-height: 25px;
+    border-radius: calc(1vw + 1vh * 0.3);
+}
+
+.logotype {
+    height: 100%;
+
+}
+.header-right{
+    font-size: calc(1vw + 1vh * 3);
+}
+.overlay1 {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    background-color: rgb(104, 170, 256);
+    background-color: rgba(104, 170, 243, 10);
+    overflow-x: hidden;
+    transition: 0.5s;
+
+}
+
+.overlay1-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay1 a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: calc(1vw + 1vh * 2);;
+    color: grey;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay1 a:hover, .overlay1 a:focus {
+    color: white;
+}
+
+.overlay1 .closebtn {
+    position: absolute;
+    top: 20px;
+    right: calc(1vw + 1vh * 2);
+    font-size: calc(1vw + 1vh * 3);
+
+}
+
+@media screen and (max-height: 450px) {
+    .overlay1 a {
+        font-size: 20px
+    }
+    .overlay1 .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+
+img.sticky {
+    position: relative;
+    float: right;
+    top: 0;
+    z-index: 2;
+}
+
+
+@media screen and (max-width: 720px) {
+    .header div.companyName {
+        font-size: 30px;
+    }
+
+    .about {
+        padding-top: 35%;
+        width: 90%;
+        font-size: 15px;
+    }
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding-top: 10%;
+    height: 50%;
+}
+.column h2{
+    text-align: center;
+}
+
+/* Left and right column */
+.column.side {
+    width: 25%;
+
+}
+
+/* Middle column */
+.column.middle {
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+
+
+
+
+
+/* Style the footer */
+.footer {
+    background-color: rgba(224, 180, 41, 0.8);
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    font-size: 12px;
+    height: 15%;
+}
+.footer-ul{
+    display: flex;
+
+    flex-wrap: nowrap;
+}
+.footer-ul ul{
+    list-style-type: none;
+}
+.footer1{
+    order:1;
+    width: 50%;
+}
+.footer2{
+    order:2;
+    width: 50%;
+}
+@media screen and (max-height: 916px) and (max-width: 500px) {
+    #column1 {
+        padding-top: 20%;
+    }
+    .column{
+        padding-top: 2%;
+    }
+    .footer{
+        position: relative;
+    }
+}
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+
+    }
+    #column1 {
+        padding-top: 35%;
+    }
+    body{
+        background-image: url("/images/adaptive.jpg") ;
+    }
+    .footer1{
+        float:left;
+    }
+}
+
